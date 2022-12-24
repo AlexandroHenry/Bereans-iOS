@@ -13,6 +13,7 @@
 		AA31D68B29556A1200D9D3F2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA31D68A29556A1200D9D3F2 /* Preview Assets.xcassets */; };
 		AA31D68D29556A1200D9D3F2 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA31D68C29556A1200D9D3F2 /* Persistence.swift */; };
 		AA31D69029556A1200D9D3F2 /* Bereans.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AA31D68E29556A1200D9D3F2 /* Bereans.xcdatamodeld */; };
+		AAEA289C295724440028B596 /* Verse.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAEA289B295724440028B596 /* Verse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,7 @@
 		AA31D68A29556A1200D9D3F2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		AA31D68C29556A1200D9D3F2 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		AA31D68F29556A1200D9D3F2 /* Bereans.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Bereans.xcdatamodel; sourceTree = "<group>"; };
+		AAEA289B295724440028B596 /* Verse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Verse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +57,9 @@
 		AA31D68229556A0F00D9D3F2 /* Bereans */ = {
 			isa = PBXGroup;
 			children = (
+				AA776DA32956ABC300D82AFA /* ViewModel */,
+				AA776DA22956ABBF00D82AFA /* Model */,
+				AA776DA12956ABB500D82AFA /* View */,
 				AA31D68329556A0F00D9D3F2 /* BereansApp.swift */,
 				AA31D68529556A0F00D9D3F2 /* ContentView.swift */,
 				AA31D68729556A1200D9D3F2 /* Assets.xcassets */,
@@ -71,6 +76,28 @@
 				AA31D68A29556A1200D9D3F2 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		AA776DA12956ABB500D82AFA /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		AA776DA22956ABBF00D82AFA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				AAEA289B295724440028B596 /* Verse.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		AA776DA32956ABC300D82AFA /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -143,6 +170,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AAEA289C295724440028B596 /* Verse.swift in Sources */,
 				AA31D69029556A1200D9D3F2 /* Bereans.xcdatamodeld in Sources */,
 				AA31D68D29556A1200D9D3F2 /* Persistence.swift in Sources */,
 				AA31D68629556A0F00D9D3F2 /* ContentView.swift in Sources */,
