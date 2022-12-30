@@ -9,20 +9,17 @@ import Foundation
 
 class ReadViewModel: ObservableObject {
 
+    // MARK: ReadView Bible Chapter
     @Published var bookName: BookName = .genesis
     @Published var chapter: Int = 1
     @Published var version: bookVersion = .krv
-    
-    @Published var bookMaxChapter: Int = 0
+    @Published var bookPart: BookPart = .old
+    @Published var fetchedChapter: [Verse] = []
     
     @Published var bookNameLang: String = ""
     
-    @Published var languages: [String] = ["Korean", "English", "Japanese", "French", "Spanish", "Chinese", "German", "Russian", "Greek", "Hindi", "Portuguese"]
-    
     @Published var font = Font.nanumSquareRoundR.rawValue
     @Published var fontSize: CGFloat = 20
-    
-    @Published var fetchedChapter: [Verse] = []
     
     @Published var searchVersionQuery = ""
     
@@ -51,56 +48,23 @@ class ReadViewModel: ObservableObject {
                 DispatchQueue.main.async {
                     self.fetchedChapter = chapter.verses
                     
-//                    print(chapter.verses)
-                }
-            } catch {
-                print(error.localizedDescription)
-            }
-            
-        }
-        .resume()
-    }
-    
-    func aboutBook() {
-        let url = "\(baseURL)/bookinfo/\(bookName.rawValue)"
-        
-        print(url)
-        
-        let session = URLSession(configuration: .default)
-        
-        session.dataTask(with: URL(string: url)!) { (data, _, err) in
-            if let error = err {
-                print(error.localizedDescription)
-                return
-            }
-            
-            guard let APIData = data else {
-                print("No Data Found")
-                return
-            }
-            
-            do {
-                let bookInfo = try JSONDecoder().decode(BookInfo.self, from: APIData)
-                
-                DispatchQueue.main.async {
-//                    self.fetchedChapter = chapter.verses
-                    
-                    self.bookMaxChapter = bookInfo.chapter
-                    
-                    switch self.version {
-                    case .krv, .krvBaptism:
-                        self.bookNameLang = bookInfo.korean;
-                    case .niv, .kjv, .nkjv:
-                        self.bookNameLang = bookInfo.english;
-                    case .cuv:
-                        self.bookNameLang = bookInfo.chinese;
-                    default:
-                        self.bookNameLang = bookInfo.korean;
+                    if (self.version == bookVersion.krv) || (self.version == bookVersion.krvBaptism) {
+                        self.bookNameLang = self.bookName.korean()
                     }
+                    
+                    if (self.version == bookVersion.niv) || (self.version == bookVersion.nkjv) || (self.version == bookVersion.kjv) {
+                        self.bookNameLang = self.bookName.rawValue
+                    }
+                    
+                    if (self.version == bookVersion.cuv) {
+                        self.bookNameLang = self.bookName.chinese()
+                    }
+                    
                 }
             } catch {
                 print(error.localizedDescription)
             }
+            
         }
         .resume()
     }

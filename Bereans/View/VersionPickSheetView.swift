@@ -57,7 +57,6 @@ struct VersionPickSheetView: View {
                                 Button {
                                     readVM.version = .krv
                                     readVM.readChapter()
-                                    readVM.aboutBook()
                                     dismiss()
                                 } label: {
                                     VStack(alignment: .leading) {
@@ -75,7 +74,6 @@ struct VersionPickSheetView: View {
                                 Button {
                                     readVM.version = .krvBaptism
                                     readVM.readChapter()
-                                    readVM.aboutBook()
                                     dismiss()
                                 } label: {
                                     VStack(alignment: .leading) {
@@ -111,7 +109,6 @@ struct VersionPickSheetView: View {
                                 Button {
                                     readVM.version = .niv
                                     readVM.readChapter()
-                                    readVM.aboutBook()
                                     dismiss()
                                 } label: {
                                     VStack(alignment: .leading) {
@@ -129,7 +126,6 @@ struct VersionPickSheetView: View {
                                 Button {
                                     readVM.version = .kjv
                                     readVM.readChapter()
-                                    readVM.aboutBook()
                                     dismiss()
                                 } label: {
                                     VStack(alignment: .leading) {
@@ -147,7 +143,6 @@ struct VersionPickSheetView: View {
                                 Button {
                                     readVM.version = .nkjv
                                     readVM.readChapter()
-                                    readVM.aboutBook()
                                     dismiss()
                                 } label: {
                                     VStack(alignment: .leading) {
@@ -183,7 +178,6 @@ struct VersionPickSheetView: View {
                                 Button {
                                     readVM.version = .cuv
                                     readVM.readChapter()
-                                    readVM.aboutBook()
                                     dismiss()
                                 } label: {
                                     VStack(alignment: .leading) {

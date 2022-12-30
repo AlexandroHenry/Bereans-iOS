@@ -40,7 +40,9 @@ struct BookPickSheetView: View {
                     
                     VStack(spacing: 30) {
                         Button {
-                            showOld.toggle()
+                            withAnimation {
+                                showOld.toggle()
+                            }
                         } label: {
                             HStack {
                                 Text("구약성경")
@@ -54,24 +56,44 @@ struct BookPickSheetView: View {
                         if showOld {
                             ForEach(old_testament, id: \.self) { book in
                                 Button {
-                                    print("\(bookChapter(book: book.rawValue))")
-                                    showChapter.toggle()
+                                    withAnimation {
+                                        if currentBook == book.rawValue {
+                                            showChapter = false
+                                        } else {
+                                            currentBook = book.rawValue
+                                            showChapter = true
+                                        }
+                                        
+                                    }
                                 } label: {
-                                    Text(book.rawValue)
+                                    Text(book.korean())
+                                        .foregroundColor(showChapter && (book.rawValue == currentBook) ? .pink : .primary)
+                                        .frame(maxWidth: .infinity, alignment: .leading)
                                 }
                                 
-//                                if showChapter && (book.rawValue == currentBook) {
-//                                    LazyVGrid(columns: Array(repeating: .init(.flexible()), count: 5)) {
-//                                        ForEach(1...bookChapter(book: book.rawValue) , id: \.self) { chapter in
-//                                            Text("\(chapter)")
-//                                        }
-//                                    }
-//                                }
+                                if showChapter && (book.rawValue == currentBook) {
+                                    LazyVGrid(columns: Array(repeating: .init(.flexible()), count: 5)) {
+                                        ForEach(1...book.chapter() , id: \.self) { chapter in
+                                            Button {
+                                                readVM.bookName = book
+                                                print(book)
+                                                readVM.chapter = chapter
+                                                readVM.readChapter()
+                                                dismiss()
+                                            } label: {
+                                                Text("\(chapter)")
+                                            }
+                                            .buttonStyle(ChapterButton())
+                                        }
+                                    }
+                                }
                             }
                         }
                         
                         Button {
-                            showNew.toggle()
+                            withAnimation {
+                                showNew.toggle()
+                            }
                         } label: {
                             HStack {
                                 Text("신약성경")
@@ -85,15 +107,33 @@ struct BookPickSheetView: View {
                         if showNew {
                             ForEach(new_testament, id: \.self) { book in
                                 Button {
-                                    showChapter.toggle()
+                                    withAnimation {
+                                        if currentBook == book.rawValue {
+                                            showChapter = false
+                                        } else {
+                                            currentBook = book.rawValue
+                                            showChapter = true
+                                        }
+                                    }
                                 } label: {
-                                    Text(book.rawValue)
+                                    Text(book.korean())
+                                        .foregroundColor(showChapter && (book.rawValue == currentBook) ? .pink : .primary)
+                                        .frame(maxWidth: .infinity, alignment: .leading)
                                 }
                                 
                                 if showChapter && (book.rawValue == currentBook) {
                                     LazyVGrid(columns: Array(repeating: .init(.flexible()), count: 5)) {
-                                        ForEach(1...bookChapter(book: book.rawValue), id: \.self) { chapter in
-                                            Text("\(chapter)")
+                                        ForEach(1...book.chapter() , id: \.self) { chapter in
+                                            Button {
+                                                readVM.bookName = book
+                                                print(book)
+                                                readVM.chapter = chapter
+                                                readVM.readChapter()
+                                                dismiss()
+                                            } label: {
+                                                Text("\(chapter)")
+                                            }
+                                            .buttonStyle(ChapterButton())
                                         }
                                     }
                                 }
@@ -117,4 +157,16 @@ struct BookPickSheetView_Previews: PreviewProvider {
 }
 
 
-
+struct ChapterButton: ButtonStyle {
+    func makeBody(configuration: Configuration) -> some View {
+        configuration.label
+            .frame(width: 40, height: 40)
+            .padding()
+            .background(.black.opacity(0.5))
+            .foregroundColor(.white)
+            .clipShape(RoundedRectangle(cornerRadius: 10))
+            .scaleEffect(configuration.isPressed ? 1.2 : 1)
+            .animation(.easeOut(duration: 0.2), value: configuration.isPressed)
+            
+    }
+}

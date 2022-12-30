@@ -68,7 +68,6 @@ struct ReadView: View {
             
         }
         .onAppear {
-            readVM.aboutBook()
             readVM.readChapter()
         }
     }
@@ -144,7 +143,7 @@ struct ReadView: View {
                     readVM.fontSize += 5
                 }
             case "nextChapter":
-                if readVM.chapter < readVM.bookMaxChapter {
+                if readVM.chapter < readVM.bookName.chapter() {
                     readVM.chapter += 1
                     
                     readVM.readChapter()
