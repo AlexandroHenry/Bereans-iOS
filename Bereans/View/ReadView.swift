@@ -51,6 +51,7 @@ struct ReadView: View {
                             
                             Text(verse.text)
                                 .font(.custom(readVM.font, size: readVM.fontSize))
+                                .lineSpacing(20)
                         }
                     }
                     
@@ -75,8 +76,8 @@ struct ReadView: View {
     @ViewBuilder
     func HeaderView() -> some View {
         HStack(spacing: 20) {
-            capsuleButton(text: "개역개정", function: "bookversion")
-            capsuleButton(text: "창세기 1", function: "bookname&bookchapter")
+            capsuleButton(text: "\(readVM.version)", function: "bookversion")
+            capsuleButton(text: "\(readVM.bookNameLang) \(readVM.chapter)", function: "bookname&bookchapter")
         }
         .font(.custom(readVM.font, size: 20))
         .frame(maxHeight: .infinity, alignment: .top)
@@ -104,7 +105,7 @@ struct ReadView: View {
             case "bookversion":
                 showBookVersionPicker.toggle()
             case "bookname&bookchapter":
-                print("bookname&bookchapter")
+                showBookPicker.toggle()
             default:
                 print("default")
             }
@@ -113,23 +114,10 @@ struct ReadView: View {
             Text(text)
         }
         .sheet(isPresented: self.$showBookVersionPicker, content: {
-            NavigationView {
-                ScrollView(.vertical, showsIndicators: false) {
-                    VStack {
-                        
-                    }
-                }
-                .navigationTitle("언어 및 버젼")
-                .toolbar {
-                    ToolbarItem(placement: .navigationBarTrailing) {
-                        Button {
-                            showBookVersionPicker = false
-                        } label: {
-                            Image(systemName: "x.circle.fill")
-                        }
-                    }
-                }
-            }
+            VersionPickSheetView()
+        })
+        .sheet(isPresented: self.$showBookPicker, content: {
+            BookPickSheetView()
         })
         .buttonStyle(CapsuleButton())
     }

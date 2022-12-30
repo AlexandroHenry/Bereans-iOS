@@ -17,23 +17,14 @@ class ReadViewModel: ObservableObject {
     
     @Published var bookNameLang: String = ""
     
-//    @Published var englishBookname: String = ""
-//    @Published var koreanBookname: String = ""
-//    @Published var japaneseBookname: String = ""
-//    @Published var frenchBookname: String = ""
-//    @Published var spanishBookname: String = ""
-//    @Published var chineseBookname: String = ""
-//    @Published var germanBookname: String = ""
-//    @Published var russianBookname: String = ""
-//    @Published var greekBookname: String = ""
-//    @Published var hindiBookname: String = ""
-//    @Published var portugueseBookname: String = ""
+    @Published var languages: [String] = ["Korean", "English", "Japanese", "French", "Spanish", "Chinese", "German", "Russian", "Greek", "Hindi", "Portuguese"]
     
     @Published var font = Font.nanumSquareRoundR.rawValue
     @Published var fontSize: CGFloat = 20
     
     @Published var fetchedChapter: [Verse] = []
-
+    
+    @Published var searchVersionQuery = ""
     
     var baseURL: String = "http://146.56.168.117"
     
@@ -113,5 +104,4 @@ class ReadViewModel: ObservableObject {
         }
         .resume()
     }
-    
 }
