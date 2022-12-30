@@ -17,4 +17,19 @@ struct BereansApp: App {
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
     }
+    
+//    init() {
+//        fontCheck()
+//    }
+//    
+//    func fontCheck() {
+//        // 폰트 체크 하기
+//        UIFont.familyNames.sorted().forEach { familyName in
+//            print("*** \(familyName) ***")
+//            UIFont.fontNames(forFamilyName: familyName).forEach { fontName in
+//                print("\(fontName)")
+//            }
+//            print("---------------------")
+//        }
+//    }
 }

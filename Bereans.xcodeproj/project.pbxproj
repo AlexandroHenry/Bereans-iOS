@@ -7,16 +7,31 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AA28A372295C2C8300933B1B /* ReadViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA28A371295C2C8300933B1B /* ReadViewModel.swift */; };
+		AA28A374295C306100933B1B /* ReadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA28A373295C306100933B1B /* ReadView.swift */; };
+		AA28A376295C307600933B1B /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA28A375295C307600933B1B /* MainView.swift */; };
+		AA28A37C295C455200933B1B /* CustomTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA28A37B295C455200933B1B /* CustomTabBar.swift */; };
+		AA28A37E295C456F00933B1B /* Views.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA28A37D295C456E00933B1B /* Views.swift */; };
 		AA31D68429556A0F00D9D3F2 /* BereansApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA31D68329556A0F00D9D3F2 /* BereansApp.swift */; };
 		AA31D68629556A0F00D9D3F2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA31D68529556A0F00D9D3F2 /* ContentView.swift */; };
 		AA31D68829556A1200D9D3F2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA31D68729556A1200D9D3F2 /* Assets.xcassets */; };
 		AA31D68B29556A1200D9D3F2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA31D68A29556A1200D9D3F2 /* Preview Assets.xcassets */; };
 		AA31D68D29556A1200D9D3F2 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA31D68C29556A1200D9D3F2 /* Persistence.swift */; };
 		AA31D69029556A1200D9D3F2 /* Bereans.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AA31D68E29556A1200D9D3F2 /* Bereans.xcdatamodeld */; };
+		AA764EF7295E96ED000F20B4 /* CookieRunRegular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AA764EF6295E96ED000F20B4 /* CookieRunRegular.ttf */; };
+		AA764EF9295E970A000F20B4 /* NanumSquareRoundR.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AA764EF8295E970A000F20B4 /* NanumSquareRoundR.ttf */; };
+		AA764EFB295E9719000F20B4 /* hambaknoon.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AA764EFA295E9719000F20B4 /* hambaknoon.ttf */; };
+		AA764EFE295E9A18000F20B4 /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA764EFD295E9A18000F20B4 /* Font.swift */; };
+		AA764F00295EBE05000F20B4 /* BookInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA764EFF295EBE05000F20B4 /* BookInfo.swift */; };
 		AAEA289C295724440028B596 /* Verse.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAEA289B295724440028B596 /* Verse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AA28A371295C2C8300933B1B /* ReadViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadViewModel.swift; sourceTree = "<group>"; };
+		AA28A373295C306100933B1B /* ReadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadView.swift; sourceTree = "<group>"; };
+		AA28A375295C307600933B1B /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		AA28A37B295C455200933B1B /* CustomTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBar.swift; sourceTree = "<group>"; };
+		AA28A37D295C456E00933B1B /* Views.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Views.swift; sourceTree = "<group>"; };
 		AA31D68029556A0F00D9D3F2 /* Bereans.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bereans.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA31D68329556A0F00D9D3F2 /* BereansApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BereansApp.swift; sourceTree = "<group>"; };
 		AA31D68529556A0F00D9D3F2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -24,6 +39,11 @@
 		AA31D68A29556A1200D9D3F2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		AA31D68C29556A1200D9D3F2 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		AA31D68F29556A1200D9D3F2 /* Bereans.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Bereans.xcdatamodel; sourceTree = "<group>"; };
+		AA764EF6295E96ED000F20B4 /* CookieRunRegular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = CookieRunRegular.ttf; sourceTree = "<group>"; };
+		AA764EF8295E970A000F20B4 /* NanumSquareRoundR.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NanumSquareRoundR.ttf; sourceTree = "<group>"; };
+		AA764EFA295E9719000F20B4 /* hambaknoon.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = hambaknoon.ttf; sourceTree = "<group>"; };
+		AA764EFD295E9A18000F20B4 /* Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
+		AA764EFF295EBE05000F20B4 /* BookInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookInfo.swift; sourceTree = "<group>"; };
 		AAEA289B295724440028B596 /* Verse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Verse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -57,6 +77,8 @@
 		AA31D68229556A0F00D9D3F2 /* Bereans */ = {
 			isa = PBXGroup;
 			children = (
+				AA764EFC295E9729000F20B4 /* Fonts */,
+				AA764EEB295E9121000F20B4 /* Resources */,
 				AA776DA32956ABC300D82AFA /* ViewModel */,
 				AA776DA22956ABBF00D82AFA /* Model */,
 				AA776DA12956ABB500D82AFA /* View */,
@@ -78,9 +100,29 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		AA764EEB295E9121000F20B4 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		AA764EFC295E9729000F20B4 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				AA764EFA295E9719000F20B4 /* hambaknoon.ttf */,
+				AA764EF8295E970A000F20B4 /* NanumSquareRoundR.ttf */,
+				AA764EF6295E96ED000F20B4 /* CookieRunRegular.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 		AA776DA12956ABB500D82AFA /* View */ = {
 			isa = PBXGroup;
 			children = (
+				AA28A373295C306100933B1B /* ReadView.swift */,
+				AA28A375295C307600933B1B /* MainView.swift */,
+				AA28A37B295C455200933B1B /* CustomTabBar.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -89,6 +131,9 @@
 			isa = PBXGroup;
 			children = (
 				AAEA289B295724440028B596 /* Verse.swift */,
+				AA28A37D295C456E00933B1B /* Views.swift */,
+				AA764EFD295E9A18000F20B4 /* Font.swift */,
+				AA764EFF295EBE05000F20B4 /* BookInfo.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -96,6 +141,7 @@
 		AA776DA32956ABC300D82AFA /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				AA28A371295C2C8300933B1B /* ReadViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -158,6 +204,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AA764EFB295E9719000F20B4 /* hambaknoon.ttf in Resources */,
+				AA764EF9295E970A000F20B4 /* NanumSquareRoundR.ttf in Resources */,
+				AA764EF7295E96ED000F20B4 /* CookieRunRegular.ttf in Resources */,
 				AA31D68B29556A1200D9D3F2 /* Preview Assets.xcassets in Resources */,
 				AA31D68829556A1200D9D3F2 /* Assets.xcassets in Resources */,
 			);
@@ -170,10 +219,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AA764F00295EBE05000F20B4 /* BookInfo.swift in Sources */,
 				AAEA289C295724440028B596 /* Verse.swift in Sources */,
 				AA31D69029556A1200D9D3F2 /* Bereans.xcdatamodeld in Sources */,
+				AA28A372295C2C8300933B1B /* ReadViewModel.swift in Sources */,
 				AA31D68D29556A1200D9D3F2 /* Persistence.swift in Sources */,
+				AA28A37C295C455200933B1B /* CustomTabBar.swift in Sources */,
 				AA31D68629556A0F00D9D3F2 /* ContentView.swift in Sources */,
+				AA28A374295C306100933B1B /* ReadView.swift in Sources */,
+				AA28A376295C307600933B1B /* MainView.swift in Sources */,
+				AA764EFE295E9A18000F20B4 /* Font.swift in Sources */,
+				AA28A37E295C456F00933B1B /* Views.swift in Sources */,
 				AA31D68429556A0F00D9D3F2 /* BereansApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -306,6 +362,7 @@
 				DEVELOPMENT_TEAM = 2UYV54B9WB;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Bereans/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -335,6 +392,7 @@
 				DEVELOPMENT_TEAM = 2UYV54B9WB;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Bereans/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

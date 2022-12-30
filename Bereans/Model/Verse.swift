@@ -7,7 +7,20 @@
 
 import Foundation
 
-struct Verse: Codable {
+struct APIChapterResult: Codable {
+    let reference: String
+    let verses: [Verse]
+    let text, translationID, translationName: String
+
+    enum CodingKeys: String, CodingKey {
+        case reference, verses, text
+        case translationID = "translation_id"
+        case translationName = "translation_name"
+    }
+}
+
+// MARK: - Verse
+struct Verse: Codable, Hashable {
     let bookID: BookID
     let bookName: BookName
     let chapter, verse: Int
@@ -58,7 +71,7 @@ enum BookID: String, Codable {
     case hab = "HAB"
     case zep = "ZEP"
     case hag = "HAG"
-    case zec = "zec"
+    case zec = "ZEC"
     case mal = "MAL"
     case mat = "MAT"
     case mrk = "MRK"
@@ -111,7 +124,7 @@ enum BookName: String, Codable {
     case psalms = "Psalms"
     case proverbs = "Proverbs"
     case ecclesiastes = "Ecclesiastes"
-    case songofsongs = "Song of Solomon"
+    case songofsongs = "Song of Songs"
     case isaiah = "Isaiah"
     case jeremiah = "Jeremiah"
     case lamentations = "Lamentations"
@@ -148,13 +161,22 @@ enum BookName: String, Codable {
     case titus = "Titus"
     case philemon = "Philemon"
     case hebrews = "Hebrews"
-    case James = "james"
-    case peter1 = "1Peter"
-    case peter2 = "2Peter"
+    case james = "James"
+    case peter1 = "1 Peter"
+    case peter2 = "2 Peter"
     case john1 = "1 John"
     case john2 = "2 John"
     case john3 = "3 John"
     case jude = "Jude"
     case revelation = "Revelation"
+}
+
+enum bookVersion: String, Codable {
+    case niv = "niv"
+    case krv = "krv"
+    case krvBaptism = "krv_baptism"
+    case kjv = "kjv"
+    case nkjv = "nkjv"
+    case cuv = "cuv"
 }
 
